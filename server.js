@@ -5,6 +5,7 @@ const colors = require("colors");
 // const connectMongoDB = require("./config/mongodb");
 
 const app = express();
+app.set("view enginer", "ejs");
 
 // Load env vars
 dotenv.config({ path: "./config/config.env" });
