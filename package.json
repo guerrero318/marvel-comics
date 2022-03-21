@@ -1,0 +1,28 @@
+{
+  "name": "marvel-comics",
+  "version": "1.0.0",
+  "description": "Comic Book store for Marvel comics",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_END=production node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guerrero318/marvel-comics.git"
+  },
+  "author": "Bryan Guerrero, Juan Mateos, Walter Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guerrero318/marvel-comics/issues"
+  },
+  "homepage": "https://github.com/guerrero318/marvel-comics#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
