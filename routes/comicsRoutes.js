@@ -7,7 +7,7 @@ const {
   createComic,
   updateComic,
   deleteComic,
-} = require("../controllers/comics");
+} = require("../controllers/comicController");
 router.route("/").get(getComics).post(createComic);
 
 router.route("/:id").get(getComic).put(updateComic).delete(deleteComic);
