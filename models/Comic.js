@@ -1,5 +1,7 @@
+// installed mongoose so we can create schemas and define the structure of the document, default values, validators, etc
 const mongoose = require("mongoose");
 
+// All comics will be made based off of this model
 const ComicSchema = new mongoose.Schema({
   title: {
     type: String,
