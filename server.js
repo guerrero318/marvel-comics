@@ -2,22 +2,34 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const colors = require("colors");
-// const connectMongoDB = require("./config/mongodb");
+const bodyParser = require("body-parser");
+const errMiddleware = require("./middleware/err");
+const connectMongoDB = require("./config/mongodb");
 
 const app = express();
+
+// Body Parser
+app.use(require("body-parser").json());
+app.use(require("body-parser").urlencoded({ extended: true }));
+
+app.use(errMiddleware);
+
 app.set("view enginer", "ejs");
 
 // Load env vars
 dotenv.config({ path: "./config/config.env" });
 
 // Connect to database
-// connectMongoDB();
+connectMongoDB();
 
 // Route files
-// const comics = require("./routes/comicsRoutes");
+const comics = require("./routes/comicsRoutes");
 
-// Dev logging middleware
-if (process.env.NODE_ENV === "development") {
+// Mount routers
+app.use("/api/v1/marvelcomics", comics);
+
+// Middleware logger
+if (process.env.NODE_ENV === "dev") {
   app.use(morgan("dev"));
 }
 
