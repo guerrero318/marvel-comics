@@ -7,57 +7,15 @@
     <title><%= pageTitle %></title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-    <nav>
-      <div class="bg-img"></div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Brand Name</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor02"
-            aria-controls="navbarColor02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <body class="comicBGPanel greyBG">
+        <!-- Header (see views folder) -->
+        <header>
+          <%- include("./nav-bar"); %>
+        </header>
 
-          <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="/api/v1/marvelcomics"
-                  >Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/admin/add-comic">Add Comic</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li> -->
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-sm-2"
-                type="text"
-                placeholder="Search"
-              />
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </nav>
     <div class="container-fluid avenger-img mt-3"></div>
     <main class="container">
       <% if(data.length > 0 ){ %>
@@ -85,6 +43,9 @@
       <h1>No Products Founds!</h1>
       <% } %>
     </main>
+    
+    <!-- Footer (see views folder) -->
+    <footer> <%- include("./footer"); %></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
