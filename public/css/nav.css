@@ -1,0 +1,25 @@
+.bg-img {
+  /* The image used */
+  background-image: url("../images/city.png");
+
+  min-height: 15vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+.avenger-img {
+  background-image: url("../images/avengers.png");
+
+  min-height: 25vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

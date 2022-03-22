@@ -3,11 +3,12 @@ const Comic = require("../models/Comic");
 
 exports.getComics = asyncWrap(async (req, res, next) => {
   const comics = await Comic.find();
-  res.status(200).json({
-    success: true,
-    count: comics.length,
-    data: comics,
-  });
+  // res.status(200).json({
+  //   success: true,
+  //   count: comics.length,
+  //   data: comics,
+  // });
+  res.status(200).render("store", { pageTitle: "Comic Store", data: comics });
   next();
 });
 
@@ -26,10 +27,11 @@ exports.getComic = asyncWrap(async (req, res, next) => {
 exports.createComic = asyncWrap(async (req, res, next) => {
   const comic = await Comic.create(req.body);
 
-  res.status(201).json({
-    success: true,
-    data: comic,
-  });
+  // res.status(201).json({
+  //   success: true,
+  //   data: comic,
+  // });
+  res.redirect("/api/v1/marvelcomics");
 });
 
 exports.updateComic = asyncWrap(async (req, res, next) => {
