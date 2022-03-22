@@ -1,3 +1,4 @@
+// created router to make it look cleaner. All methods will require the controller. GETALL and POST will have same route and getOne, PUT, and Delete will all have a route ending in ID to target that specific comic
 const express = require("express");
 const router = express.Router();
 
