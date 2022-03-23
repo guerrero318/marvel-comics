@@ -5,20 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= pageTitle %></title>
+    <!-- Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Footer Icon CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Comic Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/lop6dey.css">
   </head>
-  <body class="comicBGPanel greyBG">
+
+  <body class="comic-style-bckgrnd grey-bckgrnd">
         <!-- Header (see views folder) -->
         <header>
           <%- include("./nav-bar"); %>
         </header>
 
-    <!-- <div class="container-fluid avenger-img mt-3"></div> -->
-    <div class="image_container">
+    <!-- <div class="image_container">
+      <img class="avenger-img" src="/images/avengers.png" alt="">
       <div class="avenger-img"></div>
+    </div> -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+          <div class="overlay-img" id="img1">
+            <img src="/images/avengers.png" class="d-block w-100" alt="picture of the avengers">
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="char-color">The Avengers</h5>
+            <p>Join the avengers as they defend us all against the Multi-Verse's greatest threat yet!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="overlay-img" id="img1">
+            <img src="/images/hulk1.png" class="d-block w-100" alt="picture of the hulk">
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="char-color">Hulk</h5>
+            <p>Will Bruce Banner be able to control the best within? Find out in the next issue!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="overlay-img" id="img3">
+            <img src="/images/wolverine.png" class="d-block w-100" alt="picture of the wolverine">
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="char-color" >Wolverine</h5>
+            <p>Can logan regain his lost memories? Lets find out!</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
 
