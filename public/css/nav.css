@@ -3,43 +3,28 @@ form{
 }
 
 .bg-img {
-  /* The image used */
-  background-image: url("../images/City.png"),linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%);
+  /* The image used, then given a background of gradient colors to create a fading night sky */
+  background-image: url("../images/City.png"),linear-gradient(red, yellow);
   background-size: contain,auto;
   background-position: bottom;
   background-repeat: repeat-x;
   min-height: 200px;
-  /* Center and scale the image nicely */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* Needed to position the navbar */
   position: relative;
 }
 
 .image_container{
-  height: 350px;
-  width: 1901px;
+  width: 100%;  
+  margin: 0 auto;
 }
 
 .avenger-img {
-  background-image: url("../images/avengers.png");
+  /* background-image: url("../images/avengers.png");
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 20px; */
   margin-top: 20px;
   width: 100%;
-  height: 100%; 
-
- /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-color: #f2c94d; 
-   min-height: 39vh;
-  max-width: 100%;
-  max-height: 100%;
-  /* Center and scale the image nicely */
-   /* background-position: center;
-  background-repeat: no-repeat; */
+  height: auto; 
 }
 
 footer{
@@ -66,12 +51,12 @@ a:active{
   text-decoration: none;
 }
 
-.comicBGPanel {
+.comic-style-bckgrnd {
   padding: 0px;
   background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
   margin-bottom: -4px;
 }
-.greyBG {
+.grey-bckgrnd {
   background-image: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, 
   rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, 
   rgba(0, 0, 0, 0) 90%), 
@@ -88,4 +73,50 @@ a:active{
   radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, 
   rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), 
   linear-gradient(40deg, #484848 0, #959595 30%, #acacac 50%, #959595 70%, #484848 100%);
+}
+.big {
+  font-family: ccbiffbamboom, sans-serif;
+  color: black;
+  margin: 30px 0 -1em 0;
+  text-shadow: -1px -1px yellow, 1px 1px orange, 2px 2px orange;
+  -webkit-transform: rotate(-5deg) skew(-10deg, 0);
+  -moz-transform: rotate(-5deg) skew(-10deg, 0);
+  -ms-transform: rotate(-5deg) skew(-10deg, 0);
+  -o-transform: rotate(-5deg) skew(-10deg, 0);
+  transform: rotate(-5deg) skew(-10deg, 0);
+  padding-bottom: 0px;
+  float: left;
+  width: 100%;
+}
+h4.big {
+  font-size: 60px;
+}
+.carousel-item{
+  height: 24em;
+  color: white;
+  background: #000;
+  position: relative;
+}
+.overlay-img{
+position: abosolute;
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+background-position: center;
+background-size: cover;
+opacity: 0.5;
+}
+#img1{
+  background-image: url("../images/avengers.png");
+}
+#img2{
+  background-image: url("../images/hulk1.png");
+}
+#img3{
+  background-image: url("../images/wolverine.png");
+}
+
+.char-color{
+  color: white;
 }
