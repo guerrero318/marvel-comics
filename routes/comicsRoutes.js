@@ -17,13 +17,13 @@ const {
 router
   .route("/")
   .get(getComics)
-  .post(protectRoute, authorization("admin"), createComic);
+  .post(createComic);
 
 router
   .route("/:id")
   .get(getComic)
-  .delete(protectRoute, authorization("admin"), deleteComic);
+  .delete(deleteComic);
 
-router.route("/:id").put(protectRoute, authorization("admin"), updateComic);
+router.route("/:id").put(updateComic);
 
 module.exports = router;
