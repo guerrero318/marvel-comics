@@ -1,19 +1,19 @@
-form{
+form {
   margin-bottom: 30px;
 }
 
 .bg-img {
   /* The image used, then given a background of gradient colors to create a fading night sky */
-  background-image: url("../images/City.png"),linear-gradient(red, yellow);
-  background-size: contain,auto;
+  background-image: url("../images/City.png"), linear-gradient(red, yellow);
+  background-size: contain, auto;
   background-position: bottom;
   background-repeat: repeat-x;
   min-height: 200px;
   position: relative;
 }
 
-.image_container{
-  width: 100%;  
+.image_container {
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -24,29 +24,29 @@ form{
   margin-top: 20px; */
   margin-top: 20px;
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 
-footer{
-  background:#585963;
+footer {
+  background: #585963;
 }
-a{
+a {
   margin-right: 13px;
 }
 
-a:link{
+a:link {
   color: #fff;
   text-decoration: none;
 }
-a:visited{
+a:visited {
   color: #fff;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #fff;
   text-decoration: none;
 }
-a:active{
+a:active {
   color: #fff;
   text-decoration: none;
 }
@@ -57,22 +57,54 @@ a:active{
   margin-bottom: -4px;
 }
 .grey-bckgrnd {
-  background-image: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, 
-  rgba(0, 0, 0, 0) 90%), 
-  radial-gradient(ellipse farthest-corner at 0px 0px, 
-  rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, 
-  #ffffff 15%, 
-  #ffffff 20%, 
-  rgba(0, 0, 0, 0) 50%), 
-  radial-gradient(ellipse farthest-corner at 8px 8px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), 
-  radial-gradient(ellipse farthest-corner at 0px 8px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 40%), 
-  radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), 
-  linear-gradient(40deg, #484848 0, #959595 30%, #acacac 50%, #959595 70%, #484848 100%);
+  background-image: radial-gradient(
+      ellipse farthest-corner,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 35%,
+      #ffffff 30%,
+      #ffffff 40%,
+      rgba(0, 0, 0, 0) 90%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0px 0px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 8px 8px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0px 8px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 8px 0px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    linear-gradient(
+      40deg,
+      #484848 0,
+      #959595 30%,
+      #acacac 50%,
+      #959595 70%,
+      #484848 100%
+    );
 }
 .big {
   font-family: ccbiffbamboom, sans-serif;
@@ -91,32 +123,46 @@ a:active{
 h4.big {
   font-size: 60px;
 }
-.carousel-item{
+.carousel-item {
   height: 24em;
   color: white;
   background: #000;
   position: relative;
 }
-.overlay-img{
-position: abosolute;
-bottom: 0;
-left: 0;
-right: 0;
-top: 0;
-background-position: center;
-background-size: cover;
-opacity: 0.5;
+.overlay-img {
+  position: abosolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
 }
-#img1{
+#img1 {
   background-image: url("../images/avengers.png");
 }
-#img2{
+#img2 {
   background-image: url("../images/hulk1.png");
 }
-#img3{
+#img3 {
   background-image: url("../images/wolverine.png");
 }
 
-.char-color{
+.char-color {
   color: white;
+}
+
+.allComics {
+  background-color: #000;
+}
+
+.update-img {
+  background-image: url("../images/update.jpg");
+
+  background-size: contain, auto;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  min-height: 200px;
+  position: relative;
 }

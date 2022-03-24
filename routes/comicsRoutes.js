@@ -24,6 +24,6 @@ router
   .get(getComic)
   .delete(protectRoute, authorization("admin"), deleteComic);
 
-router.route("/").put(protectRoute, authorization("admin"), updateComic);
+router.route("/:id").put(protectRoute, authorization("admin"), updateComic);
 
 module.exports = router;
