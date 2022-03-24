@@ -31,13 +31,7 @@ exports.createComic = asyncWrap(async (req, res, next) => {
   const comic = await Comic.create(req.body);
 
   //returns a status of 201 and then JSON that says it was succesful, and all the data for that created comic.
-  res
-    .status(201)
-    .json({
-      success: true,
-      data: comic,
-    })
-    .redirect("/admin/add-comic");
+  res.redirect("/admin/comics");
 });
 
 exports.updateComic = asyncWrap(async (req, res, next) => {
@@ -48,9 +42,9 @@ exports.updateComic = asyncWrap(async (req, res, next) => {
   }
 
   // Only comics creator can update
-  if (comic.user.toString() !== req.user.id && req.user.role !== "admin") {
-    return res.status(401).send("Not authorized to access this comic");
-  }
+  // if (comic.user.toString() !== req.user.id && req.user.role !== "admin") {
+  //   return res.status(401).send("Not authorized to access this comic");
+  // }
   comic = await Comic.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -69,9 +63,9 @@ exports.deleteComic = asyncWrap(async (req, res, next) => {
     return res.status(404).send(`Comic not found with id: ${req.params.id}`);
   }
   // Only comics creator can update
-  if (comic.user.toString() !== req.user.id && req.user.role !== "admin") {
-    return res.status(401).send("Not authorized to access this comic");
-  }
+  // if (comic.user.toString() !== req.user.id && req.user.role !== "admin") {
+  //   return res.status(401).send("Not authorized to access this comic");
+  // }
   comic.remove();
   res.status(200).json({
     success: true,

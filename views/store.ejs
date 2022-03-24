@@ -19,14 +19,10 @@
   </head>
 
   <body class="comic-style-bckgrnd grey-bckgrnd">
+    <!-- Header (see views folder) -->
+    <header><%- include("./nav-bar"); %></header>
 
-    
-        <!-- Header (see views folder) -->
-        <header>
-          <%- include("./nav-bar"); %>
-        </header>
-
-        <!-- carousel -->
+    <!-- carousel -->
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button
@@ -61,8 +57,18 @@
           </div>
           <div class="carousel-caption d-none d-md-block">
             <h5 class="char-color">The Avengers</h5>
-            <p>ENTER THE PHOENIX: THE FIERY FINALE! As the greatest heroes and villains of the Marvel Universe are trapped within the battle to decide the all-new Phoenix!</p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/84362/avengers_2018_44" rel="noopener noreferrer" target="_blank">See More...</a>
+            <p>
+              ENTER THE PHOENIX: THE FIERY FINALE! As the greatest heroes and
+              villains of the Marvel Universe are trapped within the battle to
+              decide the all-new Phoenix!
+            </p>
+            <a
+              class="btn btn-dark btn-outline-light black-background"
+              href="https://www.marvel.com/comics/issue/84362/avengers_2018_44"
+              rel="noopener noreferrer"
+              target="_blank"
+              >See More...</a
+            >
           </div>
         </div>
         <div class="carousel-item">
@@ -75,8 +81,17 @@
           </div>
           <div class="carousel-caption d-none d-md-block">
             <h5 class="char-color">Hulk</h5>
-            <p>The uncontrollable rage of the Hulk has reached an all-new level, and nobody - including the Avengers - is prepared to handle it!</p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/91720/hulk_2021_1" rel="noopener noreferrer" target="_blank">See More...</a>
+            <p>
+              The uncontrollable rage of the Hulk has reached an all-new level,
+              and nobody - including the Avengers - is prepared to handle it!
+            </p>
+            <a
+              class="btn btn-dark btn-outline-light black-background"
+              href="https://www.marvel.com/comics/issue/91720/hulk_2021_1"
+              rel="noopener noreferrer"
+              target="_blank"
+              >See More...</a
+            >
           </div>
         </div>
         <div class="carousel-item">
@@ -88,9 +103,19 @@
             />
           </div>
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="char-color" >Wolverine</h5>
-            <p>WOLVERINE goes on the run with his friend C.I.A. Agent Jeff Bannister when a secret surveillance device is discovered on Krakoa - and its owners are willing to kill to get it back!</p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/90128/wolverine_2020_18" rel="noopener noreferrer" target="_blank">See More...</a>
+            <h5 class="char-color">Wolverine</h5>
+            <p>
+              WOLVERINE goes on the run with his friend C.I.A. Agent Jeff
+              Bannister when a secret surveillance device is discovered on
+              Krakoa - and its owners are willing to kill to get it back!
+            </p>
+            <a
+              class="btn btn-dark btn-outline-light black-background"
+              href="https://www.marvel.com/comics/issue/90128/wolverine_2020_18"
+              rel="noopener noreferrer"
+              target="_blank"
+              >See More...</a
+            >
           </div>
         </div>
       </div>
@@ -116,24 +141,29 @@
     <h4 class="big2 text-center">My Comics</h4>
     <!-- Cards section -->
     <main class="container" id="flip_contain">
-
       <% if(data.length > 0 ){ %>
       <div class="d-flex flex-wrap justify-content-center">
-        <% for (let product of data){ %>
+        <% for (let i = 0; i < data.length; i++){ %>
         <div class="card m-5">
           <div class="thefront">
-            <img
-            src="<%=product.photo %> "
-            class="card-img-top"
-            alt="..."/>
+            <img src="<%= data[i].photo %> " class="card-img-top" alt="..." />
           </div>
           <div class="theback">
             <div class="card-body">
-              <h5 class="card-title"><%= product.title %></h5>
-              <p class="card-text"><%= product.description %></p>
+              <h5 class="card-title"><%= data[i].title %></h5>
+              <p class="card-text"><%= data[i].description %></p>
               <div class="d-flex flex-wrap justify-content-between">
-                <a href="/admin/update-comic=<%=product._id%>" class="btn btn-warning">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a
+                  href="/admin/update-comic?id=<%=data[i]._id%>"
+                  class="btn btn-warning"
+                  >Edit</a
+                >
+                <a
+                  href="#"
+                  data-id="<%= data[i]._id %>"
+                  class="btn btn-danger delete"
+                  >Delete</a
+                >
               </div>
             </div>
           </div>
