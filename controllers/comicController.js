@@ -4,14 +4,14 @@ const ErrRes = require("../res/errRes");
 
 exports.getComics = asyncWrap(async (req, res, next) => {
   const comics = await Comic.find();
-  res.status(200).render("store", { pageTitle: "Comic Store", data: comics });
+  // res.status(200).render("store", { pageTitle: "Comic Store", data: comics });
 
   //returns a status of 200 and then JSON that says it was succesful, the amount of comics, and all the data for the comics
-  //   res.status(200).json({
-  //     success: true,
-  //     count: comics.length,
-  //     data: comics,
-  //   });
+  res.status(200).json({
+    success: true,
+    count: comics.length,
+    data: comics,
+  });
 });
 
 exports.getComic = asyncWrap(async (req, res, next) => {
@@ -37,7 +37,7 @@ exports.createComic = asyncWrap(async (req, res, next) => {
       success: true,
       data: comic,
     })
-    .redirect("/api/v1/marvelcomics");
+    .redirect("/admin/add-comic");
 });
 
 exports.updateComic = asyncWrap(async (req, res, next) => {
