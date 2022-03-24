@@ -7,70 +7,16 @@
     <title><%= pageTitle %></title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/nav.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
 
-  <body class="comicBGPanel greyBG">
+  <body class="comic-style-bckgrnd grey-bckgrnd">
     <!-- Navbar (see views folder) -->
     <header><%- include("./nav-bar"); %></header>
 
-    <section class="myservices" id="services"></section>
-
-    <!-- <div class="container-fluid avenger-img mt-3"></div> -->
-    <div class="jumbotron my-4 avenger-img"></div>
     <main class="container">
       <div class="">
         <form action="/api/v1/marvelcomics" method="POST" class="mt-5">
           <div class="mb-3">
-            <label for="title" class="form-label" style="font-weight: bolder"
-              >Title</label
-            >
-            <input
-              id="title"
-              type="text"
-              class="form-control"
-              name="title"
-              placeholder="Enter title of desired comic"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="photo" class="form-label" style="font-weight: bolder"
-              >Image</label
-            >
-            <input
-              id="photo"
-              type="text"
-              class="form-control"
-              name="photo"
-              placeholder="Enter image URL of desired comic"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="cost" class="form-label" style="font-weight: bolder"
-              >Price</label
-            >
-            <input
-              id="cost"
-              type="text"
-              class="form-control"
-              name="cost"
-              placeholder="Enter price of the new comic"
-            />
-          </div>
-          <div class="mb-3">
-            <label
-              for="description"
-              class="form-label"
-              style="font-weight: bolder"
-              >Description</label
-            >
             <textarea
               class="form-control"
               id="description"
@@ -84,18 +30,5 @@
     </main>
 
     <!-- Footer (see views folder) -->
-    <footer><%- include("./footer"); %></footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/js/index.js"></script>
   </body>
 </html>
