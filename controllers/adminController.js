@@ -6,7 +6,7 @@ exports.getAllComics = (req, res) => {
     .get("http://localhost:5003/api/v1/marvelcomics")
     .then((response) => {
       const data = response.data.data;
-      res.render("store", { pageTitle: "Comic Store", data: data });
+      res.render("store", { pageTitle: "Comic Labs", data: data });
     })
     .catch((err) => console.log(err));
 };

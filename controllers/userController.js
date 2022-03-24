@@ -34,7 +34,7 @@ exports.register = asyncWrap(async (req, res, next) => {
     role,
   });
 
-  tokenRes(user, 200, res);
+  tokenRes(user, 200, res.render("/login"));
 });
 
 exports.login = asyncWrap(async (req, res, next) => {
@@ -50,7 +50,7 @@ exports.login = asyncWrap(async (req, res, next) => {
   const user = await User.findOne({ email }).select("+password");
 
   if (user && (await user.passwordMatch(password))) {
-    tokenRes(user, 200, res);
+    tokenRes(user, 200, res.redirect("/admin/comics"));
   } else {
     res.status(401).send("Invalid Credentials");
   }

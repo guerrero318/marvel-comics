@@ -16,7 +16,7 @@ router.get("/register", (req, res) => {
   res.render("register");
 });
 router.post("/login", login);
-router.get("/auth", protectRoute, userauth);
+router.get("/auth", userauth);
 router.get("/logout", logout);
 
 module.exports = router;
