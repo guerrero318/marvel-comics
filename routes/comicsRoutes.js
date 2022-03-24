@@ -3,14 +3,27 @@ const express = require("express");
 const router = express.Router();
 
 const {
+  protectRoute,
+  authorization,
+} = require("../controllers/userController");
+
+const {
   getComics,
   getComic,
   createComic,
   updateComic,
   deleteComic,
 } = require("../controllers/comicController");
-router.route("/").get(getComics).post(createComic);
+router
+  .route("/")
+  .get(getComics)
+  .post(protectRoute, authorization("admin"), createComic);
 
-router.route("/:id").get(getComic).put(updateComic).delete(deleteComic);
+router
+  .route("/:id")
+  .get(getComic)
+  .delete(protectRoute, authorization("admin"), deleteComic);
+
+router.route("/:id").put(protectRoute, authorization("admin"), updateComic);
 
 module.exports = router;

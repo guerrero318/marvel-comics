@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+  </head>
+  <body>
+    <div class="container-fluid update-img"></div>
+    <div class="container mt-3">
+      <a href="/admin/comics" class="allComics">All Comics</a>
+    </div>
+    <main class="container">
+      <div class="">
+        <form
+          action="/api/v1/marvelcomics"
+          method="POST"
+          id="update_comic"
+          class="mt-5"
+        >
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="hidden" name="id" value="<%= data._id  %>" />
+            <input
+              id="title"
+              type="text"
+              value="<%= data.title  %>"
+              class="form-control"
+              name="title"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="photo" class="form-label">Image URL</label>
+            <input
+              id="photo"
+              type="text"
+              class="form-control"
+              name="photo"
+              value="<%= data.photo %>"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cost" class="form-label">Price</label>
+            <input
+              id="cost"
+              type="text"
+              class="form-control"
+              name="cost"
+              value="<%= data.cost  %>"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea
+              rows="7"
+              class="form-control"
+              id="description"
+              name="description"
+            >
+            <%= data.description  %></textarea
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
