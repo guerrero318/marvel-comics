@@ -1,26 +1,20 @@
+/* Used for spacing below the form tags in addComic.ejs & updateComic.ejs */
 form {
   margin-bottom: 30px;
 }
 
+ 
 .bg-img {
-  /* The image used, then given a background of gradient colors to create a fading night sky */
+   /* image with transparent background used as src, then given a background of gradient colors to create a sunset-like sky */
   background-image: url("../images/City.png"), linear-gradient(red, yellow);
-  background-size: contain, auto;
+  /* backgrnd set to contain to make img as large as posisble in container, then auto to 
+  scale the img while keeping its proportions */
+  background-size: contain, auto;  
+  /* places image at bottom edge in the container  */
   background-position: bottom;
+  /* repeats the image horizontally */
   background-repeat: repeat-x;
   min-height: 200px;
-  position: relative;
-}
-
-.image_container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.avenger-img {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
 }
 
 footer {
@@ -156,6 +150,7 @@ label.big3 {
   object-fit: cover;
   overflow: hidden;
 }
+
 .overlay-img {
   position: abosolute;
   bottom: 0;
@@ -181,15 +176,7 @@ label.big3 {
 .char-color {
   color: white;
 }
-.notched-button {
-  color: #fff;
-  border: none;
-  padding: 10px 30px;
-  background: linear-gradient(143deg, black 70%, transparent 72%) 100% 0/20px
-      100% no-repeat,
-    linear-gradient(-37deg, black 70%, transparent 72%) 0 0/20px 100% no-repeat,
-    linear-gradient(black, black) 20px 0 / calc(100% - 40px) 100% no-repeat;
-}
+
 .black-background {
   background-color: #000;
 }
@@ -205,6 +192,8 @@ label.big3 {
   transition: all 0.5s ease-in-out;
   perspective: 1000px;
 }
+
+/* when the user hovers over the card rotate 180 degrees via the Y-axis  */
 .card:hover {
   transform: rotateY(180deg);
 }
@@ -235,6 +224,7 @@ label.big3 {
   transform: rotateY(180deg);
 }
 
+/* used to make the description text scrollable within the card */
 .scrollable{
   overflow-y: auto;
   max-height: 300px;
