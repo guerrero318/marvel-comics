@@ -6,7 +6,7 @@ form {
  
 .bg-img {
    /* image with transparent background used as src, then given a background of gradient colors to create a sunset-like sky */
-  background-image: url("../images/City.png"), linear-gradient(red, yellow);
+  background-image: url("../images/City.png"), linear-gradient(#FF0000, #FFFF00);
   /* backgrnd set to contain to make img as large as posisble in container, then auto to 
   scale the img while keeping its proportions */
   background-size: contain, auto;  
@@ -97,15 +97,12 @@ a:active {
       #484848 100%
     );
 }
+
 .big {
   font-family: ccbiffbamboom, sans-serif;
   color: black;
   margin: 30px 0 0.1em 0;
   text-shadow: -1px -1px yellow, 1px 1px orange, 2px 2px orange;
-  -webkit-transform: rotate(-5deg) skew(-10deg, 0);
-  -moz-transform: rotate(-5deg) skew(-10deg, 0);
-  -ms-transform: rotate(-5deg) skew(-10deg, 0);
-  -o-transform: rotate(-5deg) skew(-10deg, 0);
   transform: rotate(-5deg) skew(-10deg, 0);
   padding-bottom: 0px;
   float: left;
@@ -116,10 +113,6 @@ a:active {
   color: black;
   margin: 30px 0 0.1em 0;
   text-shadow: -1px -1px yellow, 1px 1px orange, 2px 2px orange;
-  -webkit-transform: rotate(-5deg) skew(-10deg, 0);
-  -moz-transform: rotate(-5deg) skew(-10deg, 0);
-  -ms-transform: rotate(-5deg) skew(-10deg, 0);
-  -o-transform: rotate(-5deg) skew(-10deg, 0);
   transform: rotate(-5deg) skew(-10deg, 0);
   padding-bottom: 0px;
   width: 100%;
@@ -153,43 +146,26 @@ label.big3 {
 
 .overlay-img {
   position: abosolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
   background-position: center;
   background-size: cover;
   opacity: 0.5;
-}
-#img1 {
-  background-image: url("../images/avengers.png");
-}
-
-#img2 {
-  background-image: url("../images/hulk1.png");
-}
-
-#img3 {
-  background-image: url("../images/wolverine.png");
 }
 
 .char-color {
   color: white;
 }
 
-.black-background {
+.carousel-btn-black-background{
   background-color: #000;
 }
 
 .card {
   position: relative;
-  top: 0;
-  left: 0;
   width: 250px;
   height: 450px;
   border-radius: 10px;
   transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
   perspective: 1000px;
 }
 
@@ -197,10 +173,9 @@ label.big3 {
 .card:hover {
   transform: rotateY(180deg);
 }
+
 .thefront {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -212,14 +187,11 @@ label.big3 {
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 .theback {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: transparent;
   text-align: center;
   transform: rotateY(180deg);
 }
@@ -230,33 +202,6 @@ label.big3 {
   max-height: 300px;
 }
 
-/* .superhero_fly img {
-  width: 50px;
-  position: absolute;
-  top: 55%;
-  animation: fly 14s infinite ease-in-out;
-  overflow: hidden;
-}
-@keyframes fly {
-  0% {
-    left: -100px;
-  }
-  25% {
-    top: 50%;
-    transform: rotate(-30deg);
-  }
-  50% {
-    transform: rotate(10deg);
-    top: 60%;
-  }
-  75% {
-    top: 60%;
-    transform: rotate(-30deg);
-  }
-  100% {
-    left: 110%;
-    transform: rotate(-45deg);
-  }
-} */
+
 
 
