@@ -199,7 +199,7 @@ label.big3 {
   top: 0;
   left: 0;
   width: 250px;
-  height: 320px;
+  height: 450px;
   border-radius: 10px;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
@@ -216,8 +216,7 @@ label.big3 {
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #ffc728;
-  color: #000;
+  background: transparent;
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
@@ -230,8 +229,7 @@ label.big3 {
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #fafafa;
-  color: #333;
+  background: transparent;
   text-align: center;
   transform: rotateY(180deg);
 }
