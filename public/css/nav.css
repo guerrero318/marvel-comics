@@ -52,6 +52,7 @@ a:active {
   background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
   margin-bottom: -4px;
 }
+
 .grey-bckgrnd {
   background-image: radial-gradient(
       ellipse farthest-corner,
@@ -165,7 +166,6 @@ label.big3 {
   background-size: cover;
   opacity: 0.5;
 }
-
 #img1 {
   background-image: url("../images/avengers.png");
 }
@@ -202,7 +202,8 @@ label.big3 {
   height: 450px;
   border-radius: 10px;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
+  perspective: 1000px;
 }
 .card:hover {
   transform: rotateY(180deg);
@@ -234,11 +235,17 @@ label.big3 {
   transform: rotateY(180deg);
 }
 
-.superhero_fly img {
+.scrollable{
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+/* .superhero_fly img {
   width: 50px;
   position: absolute;
   top: 55%;
   animation: fly 14s infinite ease-in-out;
+  overflow: hidden;
 }
 @keyframes fly {
   0% {
@@ -260,4 +267,6 @@ label.big3 {
     left: 110%;
     transform: rotate(-45deg);
   }
-}
+} */
+
+
