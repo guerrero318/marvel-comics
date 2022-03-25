@@ -25,7 +25,7 @@ $("#update_comic").submit(function (event) {
   });
 });
 
-if (window.location.pathname == "/admin/comics") {
+if (window.location.pathname == "/comics") {
   $ondelete = $(".card .theback a.delete ");
   $ondelete.click(function () {
     let id = $(this).attr("data-id");
