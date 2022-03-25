@@ -15,7 +15,7 @@ const ComicSchema = new mongoose.Schema({
     required: true,
     maxlength: [500, "Name can not be more than 50 characters"],
   },
-  cost: Number,
+  // cost: Number,
   photo: {
     type: String,
     default: "no-photo.jpg",
