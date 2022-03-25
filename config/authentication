@@ -1,0 +1,10 @@
+module.exports = {
+  // ensureAuthenticated requires a user to be logged in before accessing certain routes
+  ensureAuthenticated: function (req, res, next) {
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    req.flash("error_msg", "Please log in to view that route");
+    res.redirect("/login");
+  },
+};
