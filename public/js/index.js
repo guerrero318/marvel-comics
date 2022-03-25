@@ -15,7 +15,7 @@ $("#update_comic").submit(function (event) {
   console.log(data);
 
   const request = {
-    url: `http://localhost:5003/api/v1/marvelcomics/${data.id}`,
+    url: `https://comic-labs.herokuapp.com/api/v1/marvelcomics/${data.id}`,
     method: "PUT",
     data: data,
   };
@@ -32,7 +32,7 @@ if (window.location.pathname == "/comics") {
     console.log(id);
 
     const request = {
-      url: `http://localhost:5003/api/v1/marvelcomics/${id}`,
+      url: `https://comic-labs.herokuapp.com/api/v1/marvelcomics/${id}`,
       method: "DELETE",
     };
 
