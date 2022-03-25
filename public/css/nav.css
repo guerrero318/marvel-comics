@@ -1,48 +1,48 @@
-form{
+form {
   margin-bottom: 30px;
 }
 
 .bg-img {
   /* The image used, then given a background of gradient colors to create a fading night sky */
-  background-image: url("../images/City.png"),linear-gradient(red, yellow);
-  background-size: contain,auto;
+  background-image: url("../images/City.png"), linear-gradient(red, yellow);
+  background-size: contain, auto;
   background-position: bottom;
   background-repeat: repeat-x;
   min-height: 200px;
   position: relative;
 }
 
-.image_container{
-  width: 100%;  
+.image_container {
+  width: 100%;
   margin: 0 auto;
 }
 
 .avenger-img {
   margin-top: 20px;
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 
-footer{
-  background:#585963;
+footer {
+  background: #585963;
 }
-a{
+a {
   margin-right: 13px;
 }
 
-a:link{
+a:link {
   color: #fff;
   text-decoration: none;
 }
-a:visited{
+a:visited {
   color: #fff;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #fff;
   text-decoration: none;
 }
-a:active{
+a:active {
   color: #fff;
   text-decoration: none;
 }
@@ -53,22 +53,54 @@ a:active{
   margin-bottom: -4px;
 }
 .grey-bckgrnd {
-  background-image: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, 
-  rgba(0, 0, 0, 0) 90%), 
-  radial-gradient(ellipse farthest-corner at 0px 0px, 
-  rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, 
-  #ffffff 15%, 
-  #ffffff 20%, 
-  rgba(0, 0, 0, 0) 50%), 
-  radial-gradient(ellipse farthest-corner at 8px 8px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), 
-  radial-gradient(ellipse farthest-corner at 0px 8px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 40%), 
-  radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, 
-  rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), 
-  linear-gradient(40deg, #484848 0, #959595 30%, #acacac 50%, #959595 70%, #484848 100%);
+  background-image: radial-gradient(
+      ellipse farthest-corner,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 35%,
+      #ffffff 30%,
+      #ffffff 40%,
+      rgba(0, 0, 0, 0) 90%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0px 0px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 8px 8px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 0px 8px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 40%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at 8px 0px,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      #ffffff 15%,
+      #ffffff 20%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    linear-gradient(
+      40deg,
+      #484848 0,
+      #959595 30%,
+      #acacac 50%,
+      #959595 70%,
+      #484848 100%
+    );
 }
 .big {
   font-family: ccbiffbamboom, sans-serif;
@@ -84,7 +116,7 @@ a:active{
   float: left;
   width: 100%;
 }
-.big2{
+.big2 {
   font-family: ccbiffbamboom, sans-serif;
   color: black;
   margin: 30px 0 0.1em 0;
@@ -96,27 +128,25 @@ a:active{
   transform: rotate(-5deg) skew(-10deg, 0);
   padding-bottom: 0px;
   width: 100%;
-
 }
-.big3{
+.big3 {
   font-family: ccbiffbamboom, sans-serif;
   color: black;
   margin: 30px 0 0.1em 0;
   text-shadow: -1px -1px yellow, 1px 1px orange, 2px 2px orange;
   padding-bottom: 0px;
   width: 100%;
-  
 }
 h4.big {
   font-size: 60px;
 }
-h4.big2{
+h4.big2 {
   font-size: 50px;
 }
-label.big3{
+label.big3 {
   font-size: 20px;
 }
-.carousel-item{
+.carousel-item {
   background: #000;
 }
 .carousel .carousel-inner img {
@@ -125,46 +155,46 @@ label.big3{
   object-fit: cover;
   overflow: hidden;
 }
-.overlay-img{
-position: abosolute;
-bottom: 0;
-left: 0;
-right: 0;
-top: 0;
-background-position: center;
-background-size: cover;
-opacity: 0.5;
+.overlay-img {
+  position: abosolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
 }
 
-#img1{
+#img1 {
   background-image: url("../images/avengers.png");
 }
 
-#img2{
+#img2 {
   background-image: url("../images/hulk1.png");
 }
 
-#img3{
+#img3 {
   background-image: url("../images/wolverine.png");
 }
 
-.char-color{
+.char-color {
   color: white;
 }
-.notched-button{
-  color:#fff;
-  border:none;
-  padding:10px 30px;
-  background:
-  linear-gradient(143deg,black 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-  linear-gradient(-37deg,black 70%,transparent 72%) 0 0/20px 100% no-repeat,
-  linear-gradient(black,black) 20px 0/calc(100% - 40px) 100% no-repeat;
+.notched-button {
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  background: linear-gradient(143deg, black 70%, transparent 72%) 100% 0/20px
+      100% no-repeat,
+    linear-gradient(-37deg, black 70%, transparent 72%) 0 0/20px 100% no-repeat,
+    linear-gradient(black, black) 20px 0 / calc(100% - 40px) 100% no-repeat;
 }
-.black-background{
+.black-background {
   background-color: #000;
 }
 
-.card{
+.card {
   position: relative;
   top: 0;
   left: 0;
@@ -174,10 +204,10 @@ opacity: 0.5;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
 }
-.card:hover{
+.card:hover {
   transform: rotateY(180deg);
 }
-.thefront{
+.thefront {
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +221,7 @@ opacity: 0.5;
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback{
+.theback {
   position: absolute;
   top: 0;
   left: 0;
@@ -206,72 +236,30 @@ opacity: 0.5;
   transform: rotateY(180deg);
 }
 
-#img1{
-  background-image: url("../images/avengers.png");
-}
-
-#img2{
-  background-image: url("../images/hulk1.png");
-}
-
-#img3{
-  background-image: url("../images/wolverine.png");
-}
-
-.char-color{
-  color: white;
-}
-.notched-button{
-  color:#fff;
-  border:none;
-  padding:10px 30px;
-  background:
-  linear-gradient(143deg,black 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-  linear-gradient(-37deg,black 70%,transparent 72%) 0 0/20px 100% no-repeat,
-  linear-gradient(black,black) 20px 0/calc(100% - 40px) 100% no-repeat;
-}
-.black-background{
-  background-color: #000;
-}
-
-.card{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 320px;
-  border-radius: 10px;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-}
-.card:hover{
-  transform: rotateY(180deg);
-}
-.thefront{
+.superhero_fly img {
+  width: 50px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #ffc728;
-  color: #000;
+  top: 55%;
+  animation: fly 14s infinite ease-in-out;
 }
-
-/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg);
+@keyframes fly {
+  0% {
+    left: -100px;
+  }
+  25% {
+    top: 50%;
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    top: 60%;
+  }
+  75% {
+    top: 60%;
+    transform: rotate(-30deg);
+  }
+  100% {
+    left: 110%;
+    transform: rotate(-45deg);
+  }
 }
