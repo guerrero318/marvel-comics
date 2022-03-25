@@ -7,59 +7,47 @@
     <title><%= pageTitle %></title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <!-- Footer Icon CDN -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   <!-- Comic Font -->
+   <link rel="stylesheet" href="https://use.typekit.net/lop6dey.css" />
   </head>
-  <body>
-    <div class="container-fluid update-img"></div>
-    <div class="container mt-3">
+
+  <body class="comic-style-bckgrnd grey-bckgrnd">
+    
+    <header><%- include("./nav-bar"); %></header>
+    <!-- <div class="container-fluid update-img"></div> -->
+    <!-- <div class="container mt-3">
       <a href="/comics" class="allComics">All Comics</a>
-    </div>
+    </div> -->
+
+    <h4 class="big2 text-center">Edit Comic</h4>
     <main class="container">
       <div class="">
-        <form
-          action="/api/v1/marvelcomics"
-          method="POST"
-          id="update_comic"
-          class="mt-5"
-        >
+        <form action="/api/v1/marvelcomics" method="POST" id="update_comic" class="mt-5">
           <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
+            <label for="title" class="big3 form-label">Title</label>
             <input type="hidden" name="id" value="<%= data._id  %>" />
-            <input
-              id="title"
-              type="text"
-              value="<%= data.title  %>"
-              class="form-control"
-              name="title"
-            />
+            <input id="title" type="text" value="<%= data.title  %>" class="form-control"name="title"/>
           </div>
           <div class="mb-3">
-            <label for="photo" class="form-label">Image URL</label>
-            <input
-              id="photo"
-              type="text"
-              class="form-control"
-              name="photo"
-              value="<%= data.photo %>"
-            />
+            <label for="photo" class="big3 form-label">Image URL</label>
+            <input id="photo" type="text" class="form-control" name="photo" value="<%= data.photo %>" />
           </div>
-          <div class="mb-3">
-            <label for="cost" class="form-label">Price</label>
+          <!-- <div class="mb-3">
+            <label for="cost" class="big3 form-label">Price</label>
             <input
               id="cost"
               type="text"
               class="form-control"
               name="cost"
               value="<%= data.cost  %>"
-            />
+            /> -->
           </div>
           <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea
-              rows="7"
-              class="form-control"
-              id="description"
-              name="description"
-            >
+            <label for="description" class="big3 form-label">Description</label>
+            <textarea class="form-control" id="description" name="description">
             <%= data.description  %></textarea
             >
           </div>
@@ -67,7 +55,8 @@
         </form>
       </div>
     </main>
-    <footer></footer>
+
+    <footer> <%- include("./footer"); %></footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
