@@ -1,4 +1,4 @@
-// // installed mongoose so we can create schemas and define the structure of the document, default values, validators, etc
+// // used mongoose so we can create schemas and define the structure of the document, default values, validators, etc
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 

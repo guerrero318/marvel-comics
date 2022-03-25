@@ -6,21 +6,22 @@ const passport = require("passport");
 exports.register = asyncWrap(async (req, res, next) => {
   // i destructure the request body
   const { firstName, lastName, email, password, password2 } = req.body;
+  // empty array that i push my errors to so then the error messages gets shown to the user
   let errors = [];
 
   // if the user is missing an input then they get a notification telling them to input all fields
   if (!(firstName || lastName || email || password || password2)) {
     errors.push({ msg: "Please enter input for all fields" });
   }
-
+  // if passwords do not match then then thet get a message notifying them
   if (password != password2) {
     errors.push({ msg: "Passwords entered do not match" });
   }
-
+  // if passwords are less than 6 characters then thet get a message notifying them
   if (password.length < 6) {
     errors.push({ msg: "Password must be at least 6 characters" });
   }
-
+  // if there are errors then the page renders with the error messages
   if (errors.length > 0) {
     res.render("register", {
       errors,
@@ -87,10 +88,7 @@ exports.login = asyncWrap(async (req, res, next) => {
   })(req, res, next);
 });
 
-// exports.protectRoute = asyncWrap(async (req, res, next) => {
-
-// });
-
+// here the user logs out and gets redirected to the login page and show a success message
 exports.logout = asyncWrap(async (req, res, next) => {
   req.logout();
   req.flash("success_msg", "You have successfully logged out");
