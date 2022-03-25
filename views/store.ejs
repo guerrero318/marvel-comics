@@ -19,8 +19,8 @@
     <!-- Header (see views folder) -->
     <header><%- include("./nav-bar"); %></header>
 
-    <!-- carousel -->
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Bootstrap Carousel -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -38,7 +38,7 @@
               villains of the Marvel Universe are trapped within the battle to
               decide the all-new Phoenix!
             </p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/84362/avengers_2018_44" rel="noopener noreferrer" target="_blank">See More...</a>
+            <a class="btn btn-dark btn-outline-light carousel-btn-black-background" href="https://www.marvel.com/comics/issue/84362/avengers_2018_44" rel="noopener noreferrer" target="_blank">See More...</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -51,7 +51,7 @@
               The uncontrollable rage of the Hulk has reached an all-new level,
               and nobody - including the Avengers - is prepared to handle it!
             </p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/91720/hulk_2021_1" rel="noopener noreferrer"target="_blank">See More...</a>
+            <a class="btn btn-dark btn-outline-light carousel-btn-black-background" href="https://www.marvel.com/comics/issue/91720/hulk_2021_1" rel="noopener noreferrer"target="_blank">See More...</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -65,10 +65,12 @@
               Bannister when a secret surveillance device is discovered on
               Krakoa - and its owners are willing to kill to get it back!
             </p>
-            <a class="btn btn-dark btn-outline-light black-background" href="https://www.marvel.com/comics/issue/90128/wolverine_2020_18" rel="noopener noreferrer" target="_blank">See More...</a>
+            <a class="btn btn-dark btn-outline-light carousel-btn-black-background" href="https://www.marvel.com/comics/issue/90128/wolverine_2020_18" rel="noopener noreferrer" target="_blank">See More...</a>
           </div>
         </div>
       </div>
+
+      <!-- Carousel next/previous buttons -->
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -81,7 +83,6 @@
 
     <!-- Flipping cards section -->
     <h4 class="big2 text-center">My Comics</h4>
-    <!-- Cards section -->
     <main class="container" >
       <% if(data.length > 0 ){ %>
       <div class="d-flex flex-wrap justify-content-center">
@@ -96,7 +97,7 @@
               <div class="scrollable">
                 <p class="card-text"><%= data[i].description %></p>
               </div>
-
+              <!-- Edit/ Delete buttons on the back of card -->
               <div class="d-flex flex-wrap justify-content-between">
                 <a href="/update-comic?id=<%=data[i]._id%>" class="btn btn-warning">Edit</a>
                 <a href="#" data-id="<%= data[i]._id %>" class="btn btn-danger delete">Delete</a>
