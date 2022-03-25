@@ -31,7 +31,7 @@ exports.createComic = asyncWrap(async (req, res, next) => {
   const comic = await Comic.create(req.body);
 
   //returns a status of 201 and then JSON that says it was succesful, and all the data for that created comic.
-  res.redirect("/admin/comics");
+  res.redirect("/comics");
 });
 
 exports.updateComic = asyncWrap(async (req, res, next) => {

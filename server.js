@@ -5,8 +5,8 @@ const morgan = require("morgan");
 const colors = require("colors");
 const bodyParser = require("body-parser");
 const connectMongoDB = require("./config/mongodb");
-const cookieParser = require("cookie-parser");
-const auth = require("./middleware/auth");
+// const cookieParser = require("cookie-parser");
+// const auth = require("./middleware/auth");
 // Load env vars
 dotenv.config({ path: "./config/config.env" });
 
@@ -20,10 +20,10 @@ app.use(express.static(__dirname + "/public"));
 
 // Body Parser
 app.use(require("body-parser").json());
-app.use(require("body-parser").urlencoded({ extended: false }));
+app.use(require("body-parser").urlencoded({ extended: true }));
 
 // Cookie parser
-app.use(cookieParser());
+// app.use(cookieParser());
 
 // Connect to database
 connectMongoDB();
@@ -35,8 +35,8 @@ const user = require("./routes/userRoutes");
 
 // Mount routers
 app.use("/api/v1/marvelcomics", comics);
-app.use("/admin", adminRoutes);
-app.use("/users", user);
+app.use("/", adminRoutes);
+// app.use("/users", user);
 
 // Middleware logger (installed morgan to make it look cleaner)
 if (process.env.NODE_ENV === "dev") {
@@ -54,9 +54,9 @@ const server = app.listen(
   )
 );
 
-// Handle unhandled promise rejections
-process.on("unhandledRejection", (err, promise) => {
-  console.log(`Error: ${err.message}`.red);
-  // Close server and exit process
-  server.close(() => process.exit(1));
-});
+// // Handle unhandled promise rejections
+// process.on("unhandledRejection", (err, promise) => {
+//   console.log(`Error: ${err.message}`.red);
+//   // Close server and exit process
+//   server.close(() => process.exit(1));
+// });

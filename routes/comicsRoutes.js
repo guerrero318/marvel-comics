@@ -2,10 +2,10 @@
 const express = require("express");
 const router = express.Router();
 
-const {
-  protectRoute,
-  authorization,
-} = require("../controllers/userController");
+// const {
+//   protectRoute,
+//   authorization,
+// } = require("../controllers/userController");
 
 const {
   getComics,
@@ -14,15 +14,9 @@ const {
   updateComic,
   deleteComic,
 } = require("../controllers/comicController");
-router
-  .route("/")
-  .get(getComics)
-  .post(createComic);
+router.route("/").get(getComics).post(createComic);
 
-router
-  .route("/:id")
-  .get(getComic)
-  .delete(deleteComic);
+router.route("/:id").get(getComic).delete(deleteComic);
 
 router.route("/:id").put(updateComic);
 
