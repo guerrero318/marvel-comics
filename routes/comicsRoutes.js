@@ -2,11 +2,6 @@
 const express = require("express");
 const router = express.Router();
 
-// const {
-//   protectRoute,
-//   authorization,
-// } = require("../controllers/userController");
-
 const {
   getComics,
   getComic,
